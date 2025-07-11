@@ -1,0 +1,52 @@
+{
+  "M0_pin": 5,
+  "M1_pin": 6,
+  "serial_port": "/dev/ttyS0",
+  "own_address": "0",
+  "own_channel": "0",
+  "target_address": "1",
+  "target_channel": "0",
+  "devices": [
+    {
+        "ch":0,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":1,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":2,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":3,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":4,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":5,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":6,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":7,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":8,
+        "ct": "CTL 24 CLS"
+    },
+    {
+        "ch":9,
+        "ct": "CTL 24 CLS"
+    }
+  ],
+  "Log": "False"
+}
