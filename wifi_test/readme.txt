@@ -1,1 +1,1 @@
-config.jsonからwifi情報を読み込んで、接続する
+config.jsonからwifi情報を読み込んで、接続
