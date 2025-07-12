@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボタンの状態</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: background-color 0.5s; }
+        .state-text { font-size: 3em; font-weight: bold; margin: 0; }
+        .duration-text { font-size: 1.5em; margin-top: 10px; color: #333; }
+        .state-empty { color: green; }
+        .state-occupied { color: red; }
+        table { margin-top: 20px; border-collapse: collapse; width: 80%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f4f4f4; text-align: left; }
+        
+        @media (max-width: 600px) {
+            .state-text {
+                font-size: 3em;
+            }
+            .duration-text {
+                font-size: 1.5em;
+            }
+            table {
+                width: 80%;
+                font-size: 12px;
+            }
+            th, td {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="state" class="state-text">状態: 空いてます</div>
+    <div id="duration" class="duration-text">経過時間: 00:00</div>
+    <table>
+        <thead>
+            <tr><th>時刻</th><th>経過時間</th></tr>
+        </thead>
+        <tbody id="history-table-body"></tbody>
+    </table>
+</body>
+</html>
