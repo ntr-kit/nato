@@ -1,0 +1,117 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* 時計表示のスタイル */
+#view_clock {
+    white-space: nowrap; /* 折り返しを防ぐ */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ステータス表示のスタイル */
+#status {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* ボタンの基本スタイル */
+input[type="button"] {
+    background-color: #007bff;
+    border: 3px solid #000000; /* 枠線の色と太さ */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 150px; /* ボタンの幅を固定 */
+    flex-shrink: 0; /* 幅が縮まないようにする */
+    text-align: center; /* テキストを中央揃えにする */
+}
+
+/* ボタンのホバースタイル */
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* ボタンがクリックされたときのスタイル */
+.button-clicked {
+    background-color: #f0ad4e !important;
+    color: white;
+}
+
+/* ボタンを左揃えにするための親要素のスタイル */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 左揃え */
+    align-items: flex-start;
+    gap: 10px; /* ボタン間のスペース */
+    width: auto; /* コンテナの幅をコンテンツに合わせる */
+    max-width: 800px; /* コンテナの最大幅を設定 */
+    margin: 0 auto; /* コンテナを中央に配置 */
+}
+
+.data-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+/* 温度と湿度のスタイル */
+.data-display {
+    font-size: 1.5rem; /* 文字サイズを少し小さくする */
+    font-weight: bold; /* 文字を太くする */
+    border: 3px solid #007bff; /* 枠線の色と太さ */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 10px; /* 内側の余白 */
+    margin: 20px 0; /* 上下の余白 */
+    background-color: #e7f0ff; /* 背景色を追加 */
+    text-align: center; /* テキストを中央揃え */
+    width: 250px; /* 固定幅を設定 */
+}
+
+
+.image-display {
+    margin-left: 20px;
+}
+  
+/* メディアクエリ: スマホサイズ用 */
+@media screen and (max-width: 600px) {
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .data-display {
+        font-size: 1em;
+        width: 110px; /* 固定幅を設定 */
+    }
+
+    .image-display img {
+        width: 100%;
+        height: auto;
+    }
+
+    #view_clock {
+        font-size: 1.4em; /* タブレット用にフォントサイズを調整 */
+    }
+}

@@ -1,0 +1,6 @@
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+
+1.100.83.150.11
+2.100.88.201.78
+3.100.88.19.13

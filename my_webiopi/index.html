@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>home control</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="/webiopi.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
+    <script type="text/javascript" src="/option.js"></script>
+</head>
+<body>
+    <span id="view_clock"></span>
+
+ 
+    
+    <div class="button-container">
+    <input type="button" value="Light ON/OFF" class="python" onClick="buttonClick(this); code1();">
+    <input type="button" value="Fan ON/OFF" class="python" onClick="buttonClick(this); code2();">
+    <input type="button" value="MY ROOM" class="python" onClick="buttonClick(this); code3();">
+    <input type="button" value="TV ON/OFF" class="python" onClick="buttonClick(this); code4();">
+
+    </div>
+
+    <div class="data-container">
+        <div>
+            <p class="data-display">温度 : <span id="temperature">Loading...</span></p>
+            <p class="data-display">湿度 : <span id="humidity">Loading...</span></p>
+            <p class="data-display">不快指数: <span id="discomfortIndex">-- DI</span></p>
+            <!-- 
+            <p class="data-display">本日の最高気温 :   <span id="maxTemperature">Loading...°C</span></p> -->
+
+        </div>
+        <div class="image-display">
+            <img src="DI.png" alt="Saved Image" width="350" height="350">
+        </div>
+    </div>
+
+    <div align="center">
+        <img src="/cam/?action=stream" width="380" height="380">
+    </div>
+    <p align="center">ライブカメラ</p>
+</body>
+</html>
